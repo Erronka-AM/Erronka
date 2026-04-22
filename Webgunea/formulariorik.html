@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="eu" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Industries - Formularioa</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="site-wrap">
+            <!-- GOIBURU: Logotipoa eta nabigazio nagusia dauzka. -->
+            <header class="header">
+                <div class="brand">
+                    <img src="Irudiak/logo.svg" alt="Industries logo" />
+                    <div>
+                        <h1>INDUSTRIES</h1>
+                        <p>Industria-soluzio seguruak</p>
+                    </div>
+                </div>
+                <!-- NABIGAZIOA: Webguneko orri nagusietara estekak. -->
+                <nav class="nav" role="navigation" aria-label="nagusia">
+                    <ul>
+                        <li><a href="index.html">Hasiera</a></li>
+                        <li><a href="produktuak.html">Produktuen katalogoa</a></li>
+                        <li><a href="formulariorik.html">Formularioa</a></li>
+                        <li><a href="kokapena.html">Kokapena</a></li>
+                        <li><a href="enpresa.html">Enpresari buruz</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- MAIN: Orrialdearen edukia dauka. -->
+            <main class="container">
+                <h2>Formularioa</h2>
+                <!-- FORMULARIOA: Erabiltzaileak informazioa eskatu edo kontaktatzeko atala. -->
+                <section class="card form">
+                    <!-- El formulario es estático; action='#' -->
+                    <form action="#" method="post" id="contact" accept-charset="utf-8">
+                        <div class="field"><label for="fname">Izena</label><input id="fname" name="fname" type="text" required="required" /></div>
+                        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required="required" /></div>
+                        <div class="field">
+                            <label for="service">Zerbitzua</label>
+                            <select id="service" name="service">
+                                <option>Hautatu</option>
+                                <option>Diseinua</option>
+                                <option>Fabrikazioa</option>
+                                <option>Mantenua</option>
+                            </select>
+                        </div>
+                        <div class="field"><label for="details">Xehetasunak</label><textarea id="details" name="details"></textarea></div>
+                        <button type="submit" class="cta">Bidali</button>
+                    </form>
+                </section>
+            </main>
+
+            <!-- OIN-OINA: Copyrighta, kontaktuak eta esteka osagarriak. -->
+            <footer class="footer" role="contentinfo">
+                <div>
+                    <strong>INDUSTRIES</strong><br />
+                    <small>© 2025 INDUSTRIES · Todos los derechos reservados</small>
+                </div>
+                <div class="links">
+                    <small>Telefono: +34 900 123 456</small>
+                    <a href="enpresa.html">Enpresa</a>
+                    <a href="kokapena.html">Kokapena</a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
