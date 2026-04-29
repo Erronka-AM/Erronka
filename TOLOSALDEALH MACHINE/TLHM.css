@@ -1,0 +1,442 @@
+body {
+  margin: 0;
+  background-color: #f9f9f9;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #111;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*DISEINUA*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 12px 20px;
+  background: #ffffff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.226);
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  padding: 0 24px;
+}
+
+footer {
+  background: #fff;
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.226);
+  margin-top: 60px;
+}
+
+/*GOIBURUA ETA NABIGAZIOA*/
+.Brand {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 8px;
+}
+
+.Logo {
+  height: 190px;
+  width: auto;
+  display: block;
+}
+
+nav {
+  flex: 0 1 auto;
+}
+
+.Menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: auto;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.MenuItem a,
+.Products,
+.Services {
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  padding: 10px 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  position: relative;
+}
+/*Azpimarraren animazioa gainetik pasatzean*/
+.MenuItem a::after,
+.Products::after,
+.Services::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6px;
+  height: 2px;
+  background: #ff0000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms ease;
+}
+
+.MenuItem a:hover::after,
+.Products:hover::after,
+.Services:hover::after {
+  transform: scaleX(1);
+}
+
+/*MENU ZABALGARRIAK*/
+.Productsmenu,
+.Servicesmenu {
+  position: relative;
+}
+
+.Products {
+  cursor: pointer;
+}
+
+.Productsdropdown,
+.Servicesdropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 150px;
+  z-index: 100;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.226);
+  padding: 0;
+}
+
+.Productsdropdown a,
+.Servicesdropdown a {
+  display: block;
+  color: #222;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.Productsdropdown a:hover,
+.Servicesdropdown a:hover {
+  background: rgba(245, 205, 193, 0.521);
+}
+
+.Productsmenu:hover .Productsdropdown,
+.Servicesmenu:hover .Servicesdropdown {
+  display: block;
+}
+
+/*ORRI-OINA*/
+.FooterContent {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  gap: 120px;
+  padding: 0 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.FooterSection {
+  flex: 0 0 auto;
+  width: 230px;
+}
+
+.FooterSection h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.FooterSection p {
+  margin: 8px 0;
+  color: #444;
+}
+
+.FooterSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.FooterSection ul li {
+  margin: 8px 0;
+}
+
+.FooterSection ul a {
+  color: #444;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.FooterSection ul a:hover {
+  color: #111;
+}
+/*Azpimarraren animazioa gainetik pasatzean*/
+.FooterSection ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background: #ff0000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.FooterSection ul a:hover::after {
+  transform: scaleX(1);
+}
+
+.FooterBottom {
+  margin-top: 40px;
+  padding: 20px 24px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.FooterBottom p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/*HASIERA ETA GURI BURUZ*/
+.Welcome {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.MainTitle {
+  font-size: 2.6rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.Lead {
+  font-size: 1.25rem;
+  color: #444;
+  margin-bottom: 32px;
+}
+
+.About {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.226);
+  padding: 32px 24px;
+  margin: 40px auto;
+  max-width: 700px;
+}
+
+.About h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.About p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+
+/*PRODUKTUAK ETA ZERBITZUAK*/
+.ProductsHeading,
+.ServicesHeading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ProductsHeading h1,
+.ServicesHeading h1 {
+  font-size: 2.6rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.ProductsHeading p,
+.ServicesHeading p {
+  font-size: 1.25rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ProductsGrid,
+.ServicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  padding: 20px 0;
+}
+
+.ProductCard,
+.ServiceCard {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.226);
+  padding: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+/*Produktu eta zerbitzu txarteletarako hover efektua*/
+.ProductCard:hover,
+.ServiceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgb(209, 49, 0);
+}
+
+.ProductCard h3,
+.ServiceCard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.ProductContent,
+.ServiceContent {
+  padding: 24px;
+}
+
+.ProductCategory {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.ProductDescription,
+.ServiceDescription {
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.FeaturesList,
+.ServiceFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.FeaturesList li,
+.ServiceFeatures li {
+  padding: 8px 0;
+  border-top: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+.FeaturesList li:first-child,
+.ServiceFeatures li:first-child {
+  border-top: none;
+}
+
+.Applications {
+  margin-top: 20px;
+  font-style: italic;
+  color: #555;
+}
+
+/*KONTAKTUA*/
+.ContactPage {
+  max-width: 600px;
+  margin: 40px auto 0 auto;
+  padding: 0 24px;
+}
+
+.ContactPage h1 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.ContactPage p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 32px;
+}
+
+.FormGroup {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.FormGroup label {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.FormGroup input,
+.FormGroup textarea,
+.FormGroup select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+/*Formulario elementuetarako focus efektua*/
+.FormGroup input:focus,
+.FormGroup textarea:focus,
+.FormGroup select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(196, 89, 89);
+}
+
+.Button {
+  background-color: rgba(209, 49, 0, 0.726);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.Button:hover {
+  background-color: rgb(209, 49, 0);
+}
+
+/*DISEINU MOLDAGARRIA*/
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .Menu {
+    flex-direction: column;
+    width: 100%;
+  }
+  .MenuItem a,
+  .Products,
+  .Services {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .FooterContent {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
